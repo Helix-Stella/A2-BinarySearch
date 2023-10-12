@@ -1,0 +1,22 @@
+Names = ["Abdullah", "Ayesha", "Bandashah", "Fatimah", "Muhib", "Umamah"]
+
+Upperbound = 7
+Lowerbound = 0
+Found = False
+Middle = 0
+NToS = input("Enter the name to search : ")
+
+while Upperbound >= Lowerbound and Found == False:
+    Middle = (Upperbound+Lowerbound)//2
+    if NToS == Names[Middle]:
+        Found = True
+    elif NToS > Names[Middle]:
+        Lowerbound = Middle + 1
+    elif NToS < Names[Middle]:
+        Upperbound = Middle - 1
+    if Found == True:
+        print("Your name ", NToS, " is found at ", Middle + 1)
+
+
+if Found == False:
+    print("Not Found")
